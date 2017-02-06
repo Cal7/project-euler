@@ -24,5 +24,4 @@ def parse_file(filename): #turns a file containing a text representation of a tr
     f = open(filename, "r")
     return [parse_string(line.strip()) for line in f]
 
-f = open("./data.txt", "r")
 print(get_maximum_path(parse_file("./data.txt")))
