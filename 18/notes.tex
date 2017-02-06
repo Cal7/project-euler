@@ -1,0 +1,5 @@
+\documentclass{article}
+
+\begin{document}
+For $n>1$, it is possible to transform a triangle of $n$ rows into one with $n-1$ rows by replacing the bottom two rows with a newly calculated one. This is obtained by going through the elements in the penultimate row and determining, of the two possible elements from the last row that it can be added to, which produces the largest number. For example, if the last two rows were $2\ 4\ 6$ and $8\ 5\ 9\ 3$ then these could be replaced by $10\ 13\ 15$. Thus the maximum path can be found by recursively reducing the triangle in this manner until only one row with one element remains.
+\end{document}
