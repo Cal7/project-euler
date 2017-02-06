@@ -1,0 +1,23 @@
+\documentclass{article}
+
+\begin{document}
+Let the bottom left corner of the rectangle be located at the point $(0,0)$, and let the circles each have a radius of 1. This means the line has equation $y=\frac{x}{n}$ and the first circle has equation $(x-1)^2 + (y-1)^2 = 1$. Substituting in and expanding shows that these intersect where
+
+$$ (1+\frac{1}{n^2})x^2 - (2+\frac{2}{n})x + 1 = 0 $$
+
+something easily calculable using the quadratic formula. We are only interested in the first point of intersection, i.e. the smallest root of the above polynomial. Let this intersection be the point $(X, Y)$.
+
+Let the area of the concave triangle be A. A can be split up into two areas; a right-angled triangle with points at $(0,0)$, $(X,0)$ and $(X,Y)$, and the area under the graph of $y = 1 - \sqrt{1-(x-1)^2}$ from $x=X$ to $x=1$; therefore
+
+$$ A = \frac{X*Y}{2} + I $$
+
+where $I = \int_{X}^1 1-\sqrt{1-(x-1)^2} dx$.
+
+Using the substition $x-1=sin(u)$ yields
+
+$$ I = \int_{arcsin(X-1)}^0 cos(u) - cos^2(u) du $$
+$$ = \left[ sin(u) - \frac{u}{2} - \frac{sin(2u)}{4} \right]_{arcsin(X-1)}^0 $$
+$$ = 1 - X + \frac{arcsin(X-1)}{2} + \frac{sin(2arcsin(X-1))}{4} $$
+
+Now that we can calculate the area of the concave triangle, we need to calculate what proportion of the L-section it occupies. The first circle will have area $\pi$, and the square surrounding it will have area $4$. Hence the difference in area is $4-\pi$. The L-section comprises a quarter of this area, and therefore has area $\frac{4-\pi}{4} = 1 - \frac{\pi}{4}$. This leads to the final result that the proportion of the L-section filled by the concave triangle is $\frac{A}{1-\frac{\pi}{4}}$.
+\end{document}
