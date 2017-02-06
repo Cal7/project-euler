@@ -1,6 +1,8 @@
 import math
 import numpy
 
+#in all functions, the n parameter refers to the number of circles present
+
 def get_intersection(n): #returns the first point of intersection between the line y=x/n and the circle (x-1)^2+(y-1)^2=1
     a = 1 + (1 / (n ** 2))
     b = -2 - (2 / n)
